@@ -1,0 +1,410 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Philosopher';
+    font-size: 1vw;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    background-color: #67534B;
+    width: 100vw;
+
+}
+
+/* Hero Section Start */
+
+.hero-section{
+    width: 100vw;
+    height: 52.25vw;
+    background-image: url(/Resources/HeroBackground.png);
+    background-size: cover;
+}
+
+nav{
+    height: 6.5vw;
+    margin: 0 6.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 3.9vw;
+}
+
+.nav-links a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1.3vw;
+}
+
+.hero-content .heading{
+    margin-top: 0.65vw;
+    margin-left: 5.2vw;
+    line-height: 4.88vw;
+    font-size: 5.2vw;
+    color: #E2FEFF;
+    max-width: 48vw;
+}
+
+.hero-content .description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 3.25vw;
+    margin-left: 5.2vw;
+    color: #e2feffbd;
+    font-size: 1.627vw;
+    max-width: 43vw;
+    letter-spacing: 0.26vw;
+    line-height: 2.27vw;
+}
+
+.hero-content .contact-us{
+    margin-left: 5.2vw;
+    margin-top: 2.6vw;
+    font-size: 1.62vw;
+    font-weight: 400;
+    color: white;
+    width: 32.55vw;
+    height: 5.2vw;
+    background-color: #c29c8d;
+    border-radius: 1.3vw;
+    border: none;
+    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
+}
+
+.gradient{
+    position: absolute;
+    left: 0;
+    top: 41.66vw;
+    height: 10.93vw;
+    width: 100vw;
+    background-image: url(Resources/Gradient.png);
+    background-size: cover;
+    /* background-color: red; */
+}
+
+/* Hero Section End */
+
+/* Services Section Start */
+
+.services-section{
+    /* height: 70vw; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-section .heading{
+    margin-top: 4vw;
+    line-height: 4.85vw;
+    font-size: 5.2vw;
+    color: #E2FEFF;
+    max-width: 48vw;
+}
+
+.services-section .description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 1vw;
+    color: #e2feffbd;
+    font-size: 1.627vw;
+    max-width: 55vw;
+    letter-spacing: 0.26vw;
+    line-height: 2.27vw;
+    text-align: center;
+
+}
+
+.cards{
+
+    margin-top: 6.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+  
+}
+
+.cards .card{
+    padding: 1.3vw;
+    height: 22.8vw;
+    width: 19.53vw;
+    border-radius: 1.3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .9vw;
+    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
+
+}
+
+.cards .card .img{
+    background-size: cover;
+    height: 9.76vw;
+    width: 16.27vw;
+    border-radius: 1.3vw;
+    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
+}
+
+.cards .card .card-title{
+    font-size: 1.5vw;
+    color: #08246a84;
+    font-weight: 600;
+}
+
+.cards .card .card-text{
+    font-size: .9vw;
+    color: #08246aa0;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cards .card .btn{
+    width: 9.4vw;
+    margin-top: -.9vw;
+    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
+}
+
+
+
+
+/* Services Section End */
+
+
+/* Project section Start */
+
+.projects-section{
+    padding: 3.25vw;
+    margin-top: 5vw;
+    height: 60vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.projects-section .heading{
+    margin-top: 1vw;
+    line-height: 4.85vw;
+    font-size: 5.2vw;
+    color: #E2FEFF;
+    max-width: 48vw;
+}
+
+
+.projects-section .description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 1vw;
+    color: #e2feffbd;
+    font-size: 1.627vw;
+    max-width: 55vw;
+    letter-spacing: 0.26vw;
+    line-height: 2.27vw;
+    text-align: center;
+
+}
+
+
+/* slider Control Start */
+
+.slider-controls {
+    display: flex;
+    gap: 1.3vw;
+    position: absolute;
+    top: 19vw;
+
+    
+}
+
+.slider-controls .previous, .slider-controls .next {
+    background-color: #c29c8d;
+    color: #f1fcfc;
+    font-size: 1.5vw;
+    padding: 0.8vw 2vw;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
+}
+
+
+/* slider Control End */
+
+.projects-section .slider{
+    margin-top: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 85vw;
+    /* height: 35vw; */
+    border-top-left-radius: 2.4vw;
+    border-top-right-radius: 2.4vw;
+    border-bottom-left-radius: .65vw;
+    border-bottom-right-radius: .65vw;
+    background-color: #c29c8d;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.projects-section .slider::-webkit-scrollbar{
+    height: 0.7vw;
+}
+
+.projects-section .slider::-webkit-scrollbar-thumb{
+    background-color: #592D2D;
+    border-radius: .65vw;
+}
+
+.projects-section .slider::-webkit-scrollbar-track{
+    background-color: #c29c8d;
+    border-radius: .65vw;
+}
+
+.projects-section .slider .slide{
+
+    flex: 0 0 85vw;
+    height: 100%;
+    /* width: 76.49vw; */
+    padding: 3.25vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 3.5vw;
+    align-items: center;
+    scroll-snap-align: start;
+
+}
+
+.projects-section .slider .slide .image{
+    width: 32.5vw;
+    height: 22.8vw;
+    background-size: cover;
+    border-radius: 1.23vw;
+    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
+
+}
+
+.projects-section .slider .slide .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-section .slider .slide .heading{
+    line-height: 4.85vw;
+    font-size: 3.9vw;
+    color: #592D2D;
+    max-width: 48vw;
+}
+
+.projects-section .slider .slide .description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #FFDDCF;
+    font-size: 1.3vw;
+    max-width: 50vw;
+    letter-spacing: 0.26vw;
+    text-align: center;
+
+}
+
+.projects-section .slider .slide .btn{
+    margin-top: 1vw;
+    background-color: #67534B;
+    height: 5.2vw;
+    width: 26vw;
+    border-radius: 1vw;
+    font-size: 2.27vw;
+    color: #E2FEFF;
+    border: none;
+    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;  
+
+}
+
+
+
+
+/* Project section End */
+
+.geeta-gyanam .slider-controls {
+    display: flex;
+    gap: 1.3vw;
+    position: absolute;
+    top: 19vw;
+
+    
+}
+
+
+/* Footer Section Start */
+
+footer{
+    padding: 4.5vw;
+    width: 100vw;
+    height: 26vw;
+    background-color: #E2FEFF;
+}
+
+footer .footer-block{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .footer-block .logo{
+    font-size: 1.95vw;
+}
+
+footer .footer-block .ft{
+    width: 13.02vw;
+    height: 100%;
+}
+
+footer .footer-block .ft .links{
+    margin-top: 1.95vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65vw;
+}
+
+
+footer .footer-block .ft .heading{
+    font-size: 1.62vw;
+    color: #08236A;
+}
+
+footer .footer-block .ft a{
+
+    color: #08246a8f;
+    text-decoration: none;
+    font-size: .97vw;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+.copyright{
+    font-size: .84vw;
+    letter-spacing: .32vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #08246a73;
+}
+
+
+
+/* Footer Section End */
+
+
+
