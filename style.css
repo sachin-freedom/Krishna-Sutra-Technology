@@ -22,7 +22,7 @@ main{
 .hero-section{
     width: 100vw;
     height: 52.25vw;
-    background-image: url(/Resources/HeroBackground.png);
+    background-image: url(Resources/HeroBackground.png);
     background-size: cover;
 }
 
