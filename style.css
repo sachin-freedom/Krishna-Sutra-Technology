@@ -84,7 +84,7 @@ nav .fa-bars{
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 30px ;
+  gap: 10px ;
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   padding: 0;
   padding-top: 80px;
@@ -116,7 +116,6 @@ nav .fa-bars{
 }
 
 .hero-content .heading {
-  margin-top: 2vw;
   margin-left: 5.2vw;
   line-height: 4.88vw;
   font-size: 5.2vw;
