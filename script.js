@@ -23,3 +23,20 @@ sliders.forEach((slider, index) => {
     });
   });
 });
+
+function showSidebar(){
+  const sidebar = document.querySelector(".sidebar");
+  const menubutton = document.querySelector(".sidebar i")
+  menubutton.style.transform = "rotate(180deg)"
+  sidebar.style.right = "0";
+
+}
+
+function hideSidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  const menubutton = document.querySelector(".sidebar i");
+  menubutton.style.transform = "rotate(-360deg)";
+  sidebar.style.right = "-100%";
+  
+
+}

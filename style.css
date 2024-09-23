@@ -1,410 +1,777 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Philosopher';
-    font-size: 1vw;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Philosopher";
+  font-size: 1vw;
 }
 
-html,body{
-    width: 100%;
-    height: 100%;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
-main{
-    background-color: #67534B;
-    width: 100vw;
-
+main {
+  background-color: #67534b;
+  width: 100vw;
 }
 
 /* Hero Section Start */
 
-.hero-section{
-    width: 100vw;
-    height: 52.25vw;
-    background-image: url(Resources/HeroBackground.png);
-    background-size: cover;
+.hero-section {
+  width: 100vw;
+  height: 52.25vw;
+  background-image: url(Resources/HeroBackground.png);
+  background-size: cover;
 }
 
-nav{
-    height: 6.5vw;
-    margin: 0 6.5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav {
+  /* height: 8vw; */
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #08236a; */
+  box-shadow: #0000001a 0.13vw 0.13vw 0.98vw;
 }
 
-.nav-links{
-    display: flex;
-    justify-content: space-between;
-    gap: 3.9vw;
+
+nav .logo{
+  height: 10vw;
+  width: 10vw;
+  background-image: url(Resources/KrishnaSutraLogo.png);
+  background-size: 15vw 15vw;
+  background-position: center;
 }
 
-.nav-links a{
-    color: aliceblue;
-    text-decoration: none;
-    font-size: 1.3vw;
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 3.9vw;
 }
 
-.hero-content .heading{
-    margin-top: 0.65vw;
-    margin-left: 5.2vw;
-    line-height: 4.88vw;
-    font-size: 5.2vw;
-    color: #E2FEFF;
-    max-width: 48vw;
+.nav-links a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 1.3vw;
+  padding: 1vw;
+  border-radius: .2vw;
+  transition: .1s ease-out;
 }
 
-.hero-content .description{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 3.25vw;
-    margin-left: 5.2vw;
-    color: #e2feffbd;
-    font-size: 1.627vw;
-    max-width: 43vw;
-    letter-spacing: 0.26vw;
-    line-height: 2.27vw;
+.nav-links a:hover{
+  box-shadow: #000000a0 0.13vw 0.13vw 0.98vw;
+  color: rgb(232, 242, 235);
 }
 
-.hero-content .contact-us{
-    margin-left: 5.2vw;
-    margin-top: 2.6vw;
-    font-size: 1.62vw;
-    font-weight: 400;
+nav .fa-bars{
     color: white;
-    width: 32.55vw;
-    height: 5.2vw;
-    background-color: #c29c8d;
-    border-radius: 1.3vw;
-    border: none;
-    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
+    font-size: 4vw;
+    display: none;
 }
 
-.gradient{
-    position: absolute;
-    left: 0;
-    top: 41.66vw;
-    height: 10.93vw;
-    width: 100vw;
-    background-image: url(Resources/Gradient.png);
-    background-size: cover;
-    /* background-color: red; */
+.sidebar{
+  background-color: rgba(255, 255, 255, 0.185);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 70vw;
+  z-index: 999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 30px ;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  padding-top: 80px;
+  /* position: relative; */
+  transition: .25s ease-out;
+}
+.sidebar a{
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(252, 250, 248);
+  width: 100%;
+  padding: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sidebar a:hover{
+  background-color: rgba(255, 255, 255, 0.404);
+}
+
+.sidebar i{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 1000;
+  font-size: 50px;
+  color: rgb(252,250,248);
+  transition: .5s ease-out;
+
+}
+
+.hero-content .heading {
+  margin-top: 2vw;
+  margin-left: 5.2vw;
+  line-height: 4.88vw;
+  font-size: 5.2vw;
+  color: #e2feff;
+  max-width: 48vw;
+}
+
+.hero-content .description {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 3.25vw;
+  margin-left: 5.2vw;
+  color: #e2feffbd;
+  font-size: 1.627vw;
+  max-width: 43vw;
+  letter-spacing: 0.26vw;
+  line-height: 2.27vw;
+}
+
+.hero-content .contact-us {
+  margin-left: 5.2vw;
+  margin-top: 2.6vw;
+  font-size: 1.62vw;
+  font-weight: 400;
+  color: white;
+  width: 32.55vw;
+  height: 5.2vw;
+  background-color: #c29c8d;
+  border-radius: 1.3vw;
+  border: none;
+  box-shadow: #000000c2 0.13vw 0.13vw 0.98vw;
+}
+
+.gradient {
+  position: absolute;
+  left: 0;
+  top: 41.66vw;
+  height: 10.93vw;
+  width: 100vw;
+  background-image: url(Resources/Gradient.png);
+  background-size: cover;
+  /* background-color: red; */
 }
 
 /* Hero Section End */
 
 /* Services Section Start */
 
-.services-section{
-    /* height: 70vw; */
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.services-section {
+  /* height: 70vw; */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.services-section .heading{
-    margin-top: 4vw;
-    line-height: 4.85vw;
-    font-size: 5.2vw;
-    color: #E2FEFF;
-    max-width: 48vw;
+.services-section .heading {
+  margin-top: 4vw;
+  line-height: 4.85vw;
+  font-size: 5.2vw;
+  color: #e2feff;
+  max-width: 48vw;
 }
 
-.services-section .description{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 1vw;
-    color: #e2feffbd;
-    font-size: 1.627vw;
-    max-width: 55vw;
-    letter-spacing: 0.26vw;
-    line-height: 2.27vw;
-    text-align: center;
-
+.services-section .description {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 1vw;
+  color: #e2feffbd;
+  font-size: 1.627vw;
+  max-width: 55vw;
+  letter-spacing: 0.26vw;
+  line-height: 2.27vw;
+  text-align: center;
 }
 
-.cards{
-
-    margin-top: 6.5vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2vw;
-  
+.cards {
+  margin-top: 6.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
 }
 
-.cards .card{
-    padding: 1.3vw;
-    height: 22.8vw;
-    width: 19.53vw;
-    border-radius: 1.3vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .9vw;
-    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
-
+.cards .card {
+  padding: 1.3vw;
+  height: 22.8vw;
+  width: 19.53vw;
+  border-radius: 1.3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9vw;
+  box-shadow: #000000c2 0.13vw 0.13vw 0.98vw;
 }
 
-.cards .card .img{
-    background-size: cover;
-    height: 9.76vw;
-    width: 16.27vw;
-    border-radius: 1.3vw;
-    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
+.cards .card .img {
+  background-size: cover;
+  height: 9.76vw;
+  width: 16.27vw;
+  border-radius: 1.3vw;
+  box-shadow: #000000c2 0.13vw 0.13vw 0.98vw;
 }
 
-.cards .card .card-title{
-    font-size: 1.5vw;
-    color: #08246a84;
-    font-weight: 600;
+.cards .card .card-title {
+  font-size: 1.5vw;
+  color: #08246a84;
+  font-weight: 600;
 }
 
-.cards .card .card-text{
-    font-size: .9vw;
-    color: #08246aa0;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.cards .card .card-text {
+  font-size: 0.9vw;
+  color: #08246aa0;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.cards .card .btn{
-    width: 9.4vw;
-    margin-top: -.9vw;
-    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
+.cards .card .btn {
+  width: 9.4vw;
+  margin-top: -0.9vw;
+  box-shadow: #000000c2 0.13vw 0.13vw 0.98vw;
 }
-
-
-
 
 /* Services Section End */
 
-
 /* Project section Start */
 
-.projects-section{
-    padding: 3.25vw;
-    margin-top: 5vw;
-    height: 60vw;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+.projects-section {
+  padding: 3.25vw;
+  margin-top: 5vw;
+  /* height: 60vw; */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
-.projects-section .heading{
-    margin-top: 1vw;
-    line-height: 4.85vw;
-    font-size: 5.2vw;
-    color: #E2FEFF;
-    max-width: 48vw;
+.projects-section .heading {
+  margin-top: 1vw;
+  line-height: 4.85vw;
+  font-size: 5.2vw;
+  color: #e2feff;
+  max-width: 48vw;
 }
 
-
-.projects-section .description{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 1vw;
-    color: #e2feffbd;
-    font-size: 1.627vw;
-    max-width: 55vw;
-    letter-spacing: 0.26vw;
-    line-height: 2.27vw;
-    text-align: center;
-
+.projects-section .description {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 1vw;
+  color: #e2feffbd;
+  font-size: 1.627vw;
+  max-width: 55vw;
+  letter-spacing: 0.26vw;
+  line-height: 2.27vw;
+  text-align: center;
 }
-
 
 /* slider Control Start */
 
 .slider-controls {
-    display: flex;
-    gap: 1.3vw;
-    position: absolute;
-    top: 19vw;
-
-    
+  display: flex;
+  gap: 1.3vw;
+  position: absolute;
+  top: 19vw;
 }
 
-.slider-controls .previous, .slider-controls .next {
-    background-color: #c29c8d;
-    color: #f1fcfc;
-    font-size: 1.5vw;
-    padding: 0.8vw 2vw;
-    border: none;
-    border-radius: 1vw;
-    cursor: pointer;
-    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
+.slider-controls .previous,
+.slider-controls .next {
+  background-color: #c29c8d;
+  color: #f1fcfc;
+  font-size: 1.5vw;
+  padding: 0.8vw 2vw;
+  border: none;
+  border-radius: 1vw;
+  cursor: pointer;
+  box-shadow: #000000c2 0.13vw 0.13vw 0.98vw;
 }
-
 
 /* slider Control End */
 
-.projects-section .slider{
-    margin-top: 5vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 85vw;
-    /* height: 35vw; */
-    border-top-left-radius: 2.4vw;
-    border-top-right-radius: 2.4vw;
-    border-bottom-left-radius: .65vw;
-    border-bottom-right-radius: .65vw;
-    background-color: #c29c8d;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+.projects-section .slider {
+  margin-top: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 85vw;
+  /* height: 35vw; */
+  border-top-left-radius: 2.4vw;
+  border-top-right-radius: 2.4vw;
+  border-bottom-left-radius: 0.65vw;
+  border-bottom-right-radius: 0.65vw;
+  background-color: #c29c8d;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-.projects-section .slider::-webkit-scrollbar{
-    height: 0.7vw;
+.projects-section .slider::-webkit-scrollbar {
+  height: 0.7vw;
 }
 
-.projects-section .slider::-webkit-scrollbar-thumb{
-    background-color: #592D2D;
-    border-radius: .65vw;
+.projects-section .slider::-webkit-scrollbar-thumb {
+  background-color: #592d2d;
+  border-radius: 0.65vw;
 }
 
-.projects-section .slider::-webkit-scrollbar-track{
-    background-color: #c29c8d;
-    border-radius: .65vw;
+.projects-section .slider::-webkit-scrollbar-track {
+  background-color: #c29c8d;
+  border-radius: 0.65vw;
 }
 
-.projects-section .slider .slide{
-
-    flex: 0 0 85vw;
-    height: 100%;
-    /* width: 76.49vw; */
-    padding: 3.25vw;
-    display: flex;
-    justify-content: space-between;
-    gap: 3.5vw;
-    align-items: center;
-    scroll-snap-align: start;
-
+.projects-section .slider .slide {
+  flex: 0 0 85vw;
+  height: 100%;
+  /* width: 76.49vw; */
+  padding: 3.25vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 3.5vw;
+  align-items: center;
+  scroll-snap-align: start;
 }
 
-.projects-section .slider .slide .image{
-    width: 32.5vw;
-    height: 22.8vw;
-    background-size: cover;
-    border-radius: 1.23vw;
-    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;
-
+.projects-section .slider .slide .image {
+  width: 32.5vw;
+  height: 22.8vw;
+  background-size: cover;
+  border-radius: 1.23vw;
+  box-shadow: #000000c2 0.13vw 0.13vw 0.98vw;
 }
 
-.projects-section .slider .slide .content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.projects-section .slider .slide .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.projects-section .slider .slide .heading{
-    line-height: 4.85vw;
-    font-size: 3.9vw;
-    color: #592D2D;
-    max-width: 48vw;
+.projects-section .slider .slide .heading {
+  line-height: 4.85vw;
+  font-size: 3.9vw;
+  color: #592d2d;
+  max-width: 48vw;
 }
 
-.projects-section .slider .slide .description{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #FFDDCF;
-    font-size: 1.3vw;
-    max-width: 50vw;
-    letter-spacing: 0.26vw;
-    text-align: center;
-
+.projects-section .slider .slide .description {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #ffddcf;
+  font-size: 1.3vw;
+  max-width: 50vw;
+  letter-spacing: 0.26vw;
+  text-align: center;
 }
 
-.projects-section .slider .slide .btn{
-    margin-top: 1vw;
-    background-color: #67534B;
-    height: 5.2vw;
-    width: 26vw;
-    border-radius: 1vw;
-    font-size: 2.27vw;
-    color: #E2FEFF;
-    border: none;
-    box-shadow:#000000c2 0.13vw 0.13vw 0.98vw;  
-
+.projects-section .slider .slide .description .strong-text{
+    color: #592d2d;
+    font-size: 1.7vw;
 }
 
 
 
+.projects-section .slider .slide .btn {
+  margin-top: 1vw;
+  background-color: #67534b;
+  height: 5.2vw;
+  width: 26vw;
+  border-radius: 1vw;
+  font-size: 2.27vw;
+  color: #e2feff;
+  border: none;
+  box-shadow: #000000c2 0.13vw 0.13vw 0.98vw;
+}
 
 /* Project section End */
 
 .geeta-gyanam .slider-controls {
-    display: flex;
-    gap: 1.3vw;
-    position: absolute;
-    top: 19vw;
-
-    
+  display: flex;
+  gap: 1.3vw;
+  position: absolute;
+  top: 19vw;
 }
+
+/* Footer Section Start */
+
+footer {
+  padding: 4.5vw;
+  width: 100vw;
+  /* min-height: 26vw; */
+  background-color: #e2feff;
+}
+
+footer .footer-block {
+  /* height: 100%;
+  width: 100%; */
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  padding: 0 5vw;
+  padding-bottom: 5vw;
+  gap: 5vw;
+}
+
+footer .footer-block .logo {
+  font-size: 1.95vw;
+}
+
+footer .footer-block .ft {
+  width: 16.02vw;
+}
+
+footer .footer-block .ft .links {
+  margin-top: 1.95vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+footer .footer-block .ft .heading {
+  font-size: 1.9vw;
+  color: #08236a;
+}
+
+footer .footer-block .ft a {
+  color: #08246a8f;
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: 400;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.copyright {
+  font-size: 0.84vw;
+  letter-spacing: 0.32vw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #08246a73;
+}
+
+/* Footer Section End */
+
+/* Responsiveness Start */
+
+@media (max-width: 625px) {
+
+
+  /* Hero Section Start */
+
+  .hero-section {
+    width: 100vw;
+    height: 115vw;
+    background-position-x: -60vw;
+  }
+
+  nav{
+    /* height: 15vw; */
+    /* padding-right: 2vw;
+    padding-top: 1vw; */
+    box-shadow: #00000086 0.13vw 0.13vw 0.98vw;
+
+  }
+
+  nav .logo{
+  height: 20vw;
+  width: 20vw;
+  background-image: url(Resources/KrishnaSutraLogo.png);
+  background-size: 31vw 31vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+  .nav-links {
+    display: none;
+  }
+
+  nav .fa-bars{
+    color: white;
+    font-size: 4vw;
+    display: block;
+    box-shadow: #000000c2 0.13vw 0.13vw 0.98vw;
+    padding: 4vw;
+}
+
+
+  .hero-content .heading {
+    margin-top: 4.65vw;
+    margin-left: 4.2vw;
+    line-height: 10.88vw;
+    font-size: 10.2vw;
+    max-width: 90vw;
+   
+  }
+
+  .hero-content .description {
+    margin-top: 7.25vw;
+    margin-left: 4.2vw;
+    color: #e2feffd3;
+    font-size: 5.627vw;
+    max-width: 90vw;
+    letter-spacing: 0.26vw;
+    line-height: 6.27vw;
+    /* box-shadow: #000000c2 0.13vw 0.13vw 0.98vw; */
+  }
+
+  .hero-content .contact-us {
+    margin-left: 4.2vw;
+    margin-top: 7.6vw;
+    font-size: 4.62vw;
+    width: 49.55vw;
+    height: 11.2vw;
+    border-radius: 1.3vw;
+    border: none;
+    box-shadow: #000000c2 0.13vw 0.13vw 0.98vw;
+  }
+
+  .gradient {
+    display: none;
+  }
+
+  /* Hero Section End */
+
+
+  /* Services Section Start */
+
+.services-section {
+  /* height: 70vw; */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-section .heading {
+  margin-top: 4vw;
+  line-height: 16.85vw;
+  font-size: 14.2vw;
+  color: #e2feff;
+  max-width: 85vw;
+  /* box-shadow: #000000c2 0.13vw 0.13vw 0.98vw; */
+  
+}
+
+.services-section .description {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 2vw;
+  color: #e2feffbd;
+  font-size: 5.627vw;
+  max-width: 90vw;
+  letter-spacing: 0.26vw;
+  line-height: 6.27vw;
+  text-align: center;
+}
+
+.cards {
+  margin-top: 6.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.cards .card {
+  padding: 5.3vw;
+  height: 101.8vw;
+  width: 85.53vw;
+  gap: 2.9vw;
+}
+
+.cards .card .img {
+  height: 44.76vw;
+  width: 59.27vw;
+}
+
+.cards .card .card-title {
+  font-size: 6.5vw;
+}
+
+.cards .card .card-text {
+  font-size: 4.9vw;
+}
+
+.cards .card .btn {
+  height: 11vw;
+  font-size: 4.5vw;
+  width: 66.4vw;
+  margin-top: -0.9vw;
+  box-shadow: #000000c2 0.13vw 0.13vw 0.98vw;
+}
+
+/* Services Section End */
+
+
+
+/* Project section Start */
+
+.projects-section {
+  padding: 3.25vw;
+  margin-top: 5vw;
+  width: 100vw;
+}
+
+.projects-section .heading {
+  margin-top: 4vw;
+  line-height: 16.85vw;
+  font-size: 11.2vw;
+  max-width: 85vw;
+}
+
+.projects-section .description {
+  margin-top: 2vw;
+  font-size: 4.627vw;
+  max-width: 90vw;
+  letter-spacing: 0.26vw;
+  line-height: 6.27vw;
+}
+
+.projects-section .slider .slide .description .strong-text{
+    color: #592d2d;
+    font-size: 3.7vw;
+}
+
+/* slider Control Start */
+
+.slider-controls {
+  gap: 5.3vw;
+  top: 49vw;
+}
+
+.slider-controls .previous,
+.slider-controls .next {
+  font-size: 4.5vw;
+  padding: 1.8vw 3vw;
+  border-radius: 1vw;
+}
+
+/* slider Control End */
+
+.projects-section .slider {
+  margin-top: 10vw;
+  width: 90vw;
+  /* height: 35vw; */
+  border-top-left-radius: 2.4vw;
+  border-top-right-radius: 2.4vw;
+  border-bottom-left-radius: 0.65vw;
+  border-bottom-right-radius: 0.65vw;
+  padding: 10vw 0;
+}
+
+
+.projects-section .slider .slide {
+  flex: 0 0 90vw;
+  height: 100%;
+  padding: 3.25vw;
+  flex-direction: column;
+  gap: 3.5vw;
+}
+
+.projects-section .slider .slide .image {
+  width: 70.5vw;
+  height: 57.8vw;
+  border-radius: 1.23vw;
+}
+
+.projects-section .slider .slide .heading {
+  line-height: 9.85vw;
+  font-size: 7.9vw;
+  max-width: 90vw;
+}
+
+.projects-section .slider .slide .description {
+  font-size: 4.3vw;
+  max-width: 85vw;
+  letter-spacing: 0.26vw;
+}
+
+.projects-section .slider .slide .btn {
+  margin-top: 4vw;
+  height: 11.2vw;
+  width: 37vw;
+  border-radius: 1vw;
+  font-size: 4.27vw;
+}
+
+/* Project section End */
+
+/* Geeta Gyanam start */
+
+.geeta-gyanam .slider-controls {
+  display: flex;
+  gap: 1.3vw;
+  position: absolute;
+  top: 50vw;
+}
+
+/* Geeta Gyanam end */
+
+
 
 
 /* Footer Section Start */
 
-footer{
-    padding: 4.5vw;
-    width: 100vw;
-    height: 26vw;
-    background-color: #E2FEFF;
+footer {
+  padding: 10vw;
+  width: 100vw;
+  background-color: #e2feff;
 }
 
-footer .footer-block{
-    height: 100%;
-    width: 100%;
-    /* background-color: red; */
-    display: flex;
-    justify-content: space-around;
+footer .footer-block {
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 10vw;
+  gap: 10vw;
 }
 
-footer .footer-block .logo{
-    font-size: 1.95vw;
+.logo h5{
+    font-size: 5vw;
 }
 
-footer .footer-block .ft{
-    width: 13.02vw;
-    height: 100%;
+footer .footer-block .ft {
+  width: 70vw;
 }
 
-footer .footer-block .ft .links{
-    margin-top: 1.95vw;
-    display: flex;
-    flex-direction: column;
-    gap: 0.65vw;
+footer .footer-block .ft .links {
+  margin-top: 1.95vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2.65vw;
 }
 
-
-footer .footer-block .ft .heading{
-    font-size: 1.62vw;
-    color: #08236A;
+footer .footer-block .ft .heading {
+  font-size: 6.62vw;
+  color: #08236a;
 }
 
-footer .footer-block .ft a{
-
-    color: #08246a8f;
-    text-decoration: none;
-    font-size: .97vw;
-    font-weight: 400;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-
+footer .footer-block .ft a {
+  color: #08246a8f;
+  text-decoration: none;
+  font-size: 3.97vw;
+  font-weight: 400;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.copyright{
-    font-size: .84vw;
-    letter-spacing: .32vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #08246a73;
+.copyright {
+  font-size: 3.84vw;
+  letter-spacing: 1vw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #08246a52;
 }
-
-
 
 /* Footer Section End */
 
 
 
+
+
+
+}
+
+/* Responsiveness End */
