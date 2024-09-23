@@ -21,7 +21,7 @@ main {
 
 .hero-section {
   width: 100vw;
-  height: 52.25vw;
+  height: 55vw;
   background-image: url(Resources/HeroBackground.png);
   background-size: cover;
 }
@@ -146,12 +146,13 @@ nav .fa-bars{
   border-radius: 1.3vw;
   border: none;
   box-shadow: #000000c2 0.13vw 0.13vw 0.98vw;
+  z-index: 1000;
 }
 
 .gradient {
   position: absolute;
   left: 0;
-  top: 41.66vw;
+  top: 45vw;
   height: 10.93vw;
   width: 100vw;
   background-image: url(Resources/Gradient.png);
